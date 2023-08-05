@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { 
+    background-image: url(./images/bg4.jpg) ;
+    text-align: center;
+    position: relative;
+    margin-top: 110px;
+}
+
