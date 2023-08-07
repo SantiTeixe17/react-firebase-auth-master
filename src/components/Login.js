@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Alert } from "./Alert";
+import userImage from "../images/name.svg";
+import  emailImage  from "../images/email.svg";
+import  passwordImage  from "../images/password.svg";
 
 export function Login() {
   const [user, setUser] = useState({
@@ -50,7 +53,17 @@ export function Login() {
   return (
     <div className="w-full max-w-xs m-auto">
       {error && <Alert message={error} />}
-
+      <div className="flex items-center justify-center">
+        <img
+          src="./favicon.ico"
+          alt="Favicon"
+          className="w-10 h-10"
+          style={{ marginRight: "5px" }}
+        />
+        <h1 className="text-3xl text-center  text-yellow-500 p-4 font-bold underline hoverEffect">
+          Mundo Electro
+        </h1>
+      </div>
       <form
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
@@ -60,6 +73,7 @@ export function Login() {
             htmlFor="username"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
+          <img src={userImage} alt="User Icon" className="mr-2 inline-block w-6 h-6" />
             Usuario
           </label>
           <input
@@ -75,6 +89,7 @@ export function Login() {
             htmlFor="email"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
+          <img src={emailImage} alt="User Icon" className="mr-2 inline-block w-6 h-6" />
             Email
           </label>
           <input
@@ -91,6 +106,7 @@ export function Login() {
             htmlFor="password"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
+          <img src={passwordImage} alt="User Icon" className="mr-2 inline-block w-6 h-6" />
             Contraseña
           </label>
           <input
@@ -121,7 +137,7 @@ export function Login() {
       </form>
       <button
         onClick={handleGoogleSignin}
-        className="bg-slate-50 hover:bg-slate-200 text-black shadow rounded border-2 border-gray-300 py-2 px-4 w-full"
+        className="bg-slate-50 hover:bg-slate-200 text-black bg-red-500 p-4 shadow rounded border-2 border-gray-300 py-2 px-4 w-full"
       >
         Google Login
       </button>

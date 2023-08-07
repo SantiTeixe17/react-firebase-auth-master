@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Alert } from "./Alert";
+import userImage from "../images/name.svg";
+import  emailImage  from "../images/email.svg";
+import  passwordImage  from "../images/password.svg";
 export function Register() {
   const { signup } = useAuth();
 
@@ -28,7 +31,17 @@ export function Register() {
   return (
     <div className="w-full max-w-xs m-auto text-black">
       {error && <Alert message={error} />}
-
+      <div className="flex items-center justify-center">
+        <img
+          src="./favicon.ico"
+          alt="Favicon"
+          className="w-10 h-10"
+          style={{ marginRight: "5px" }}
+        />
+        <h1 className="text-3xl text-center p-8 text-yellow-500 font-bold underline hoverEffect">
+          Mundo Electro
+        </h1>
+      </div>
       <form
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded px-8 pt-6 pb-6 mb-4"
@@ -38,6 +51,8 @@ export function Register() {
             htmlFor="username"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
+          <img src={userImage} alt="User Icon" className="mr-2 inline-block w-6 h-6" />
+          
             Usuario
           </label>
           <input
@@ -53,6 +68,7 @@ export function Register() {
             htmlFor="email"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
+          <img src={emailImage} alt="User Icon" className="mr-2 inline-block w-6 h-6" />
             Email
           </label>
           <input
@@ -68,6 +84,7 @@ export function Register() {
             htmlFor="password"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
+          <img src={passwordImage} alt="User Icon" className="mr-2 inline-block w-6 h-6" />
             Contraseña
           </label>
           <input
