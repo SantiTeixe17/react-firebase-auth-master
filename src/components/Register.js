@@ -44,12 +44,12 @@ export function Register() {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded px-8 pt-6 pb-6 mb-4"
+        className="bg-white shadow-md rounded-md px-8 pt-6 pb-6 mb-4"
       >
         <div className="mb-4">
           <label
             htmlFor="username"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-sm rounded-md font-bold mb-2"
           >
           <img src={userImage} alt="User Icon" className="mr-2 inline-block w-6 h-6" />
           
@@ -58,7 +58,7 @@ export function Register() {
           <input
             type="username"
             onChange={(e) => setUser({ ...user, username: e.target.value })}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Usuario"
           />
         </div>
@@ -66,7 +66,7 @@ export function Register() {
         <div className="mb-4">
           <label
             htmlFor="email"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-sm rounded-md font-bold mb-2"
           >
           <img src={emailImage} alt="User Icon" className="mr-2 inline-block w-6 h-6" />
             Email
@@ -74,7 +74,7 @@ export function Register() {
           <input
             type="email"
             onChange={(e) => setUser({ ...user, email: e.target.value })}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="tu@email"
           />
         </div>
@@ -82,7 +82,7 @@ export function Register() {
         <div className="mb-4">
           <label
             htmlFor="password"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-sm rounded-md font-bold mb-2"
           >
           <img src={passwordImage} alt="User Icon" className="mr-2 inline-block w-6 h-6" />
             Contraseña
@@ -90,12 +90,12 @@ export function Register() {
           <input
             type="password"
             onChange={(e) => setUser({ ...user, password: e.target.value })}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="*************"
           />
         </div>
 
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
           Registrate
         </button>
       </form>
